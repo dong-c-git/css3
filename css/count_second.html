@@ -1,0 +1,135 @@
+</!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>倒计时弹窗</title>
+    <style type="text/css">
+        .meun{
+            height:200px;
+            background-color:gold;
+            position:fixed;
+            width:960px;
+            top:0px;
+            left:50%;
+            margin-left:-480px;
+        }
+        p{
+            text-align:center;
+        }
+        .popup{
+            width:500px;
+            height:300px;
+            border:1px solid #000;
+            background-color:#fff;
+            position:fixed;
+            left:50%;
+        }
+
+        .pop_con{
+            display:none;
+
+        }
+    </style>
+    <script type="text/javascript">
+        window.inload = function(){
+            var opop = document.getElementById("pop_con");
+            var obtn = document.getElementById("btn");
+            var opop_tip = document.getElementById("pop_id");
+            var itime = 5
+
+            obtn.onclick = function(){
+                opop.style.display = 'block';
+                // var timer = setInterval(fnDaojishi,1000);
+                // function fnDaojishi(){
+                //     itime--;
+                //     opop_tip.innerHTMl = '还有'+itime+"秒钟关闭弹窗";
+                //     if(itime==0){
+                //         opop.style.display = 'block';
+                //         clearInterval(timer);
+                //     }
+                // }
+                var timer = setInterval(function(){
+                    itime--;
+                    opop_tip.innerHTMl = '还有'+itime+"秒钟关闭弹窗";
+                    if(itime==0){
+                        opop.style.display = 'none';
+                        clearInterval(timer);
+                    }},1000);
+            }
+
+
+        }
+    </script>
+ <!--    <script type="text/javascript">
+         window.onload = function(){
+            var odiv = docmuntgetElementById("div1");
+            var sid = odiv.id;
+            alert(sid);
+            var class_name = doumuntgetElementClassName("box");
+            var ssid = class_name.id;
+            alert(ssid);
+            alert("hello world!");
+
+        }
+        alert("hello world");
+        var inum = 12, strong = "red";
+        alert(inum+strong);
+
+    </script> -->
+    <!-- <script type="text/javascript">
+    	window.onload = function(){
+    		var oid1 = document.getElementById('divb1');
+    		var oid2 = document.getElementById('divb2');
+    		var olink = document.getElementById('linkid');
+
+    		oid1.onclick = function(){
+    			olink.href = "css/main1.css";
+    			alert("1号背景");
+    		};
+    		oid2.onclick = function(){
+    			olink.href = "css/main2.css";
+    			alert("2号背景");
+    		};
+    	}
+    </script> -->
+</head>
+<body>
+    <div class="meun">菜单文字</div>
+    <div class="pop_con" id="pop_con">
+        <div class="popup">
+            <h2>弹窗的标题</h2>
+            <br />
+            <br />
+            <br />
+            <p id="pop_id">弹窗还有5s关闭</p>
+        </div> 
+        <div class="mask"></div>        
+    </div>
+    <input type="button" name="" value="弹出弹窗" id="btn">
+    <p>网页文字</p>
+    <br />
+    <br />
+    <br />
+    <br />
+     <p>网页文字</p>
+    <br />
+    <br />
+    <br />
+    <br />
+     <p>网页文字</p>
+    <br />
+    <br />
+    <br />
+    <br />
+     <p>网页文字</p>
+    <br />
+    <br />
+    <br />
+    <br />
+     <p>网页文字</p>
+    <br />
+    <br />
+    <br />
+    <br />
+ </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>js加法</title>
+	<script type="text/javascript">
+		window.onload =function() {
+
+			// body...
+			var oinput1 = document.getElementById('input1');
+			var oinput2 = document.getElementById('input2');
+			var obtn = document.getElementById('count');
+
+			obtn.onclick = function(){
+				var ival01 = parseInt(oinput1.value);
+				var ival02 = parseInt(oinput2.value);
+
+				alert(ival01+ival02);
+
+
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="text" name="" id="input1">
+	<input type="text" name="" id="input2">
+	<input type="button" name="" id="count" value="相加">
+
+</body>
+</html>
