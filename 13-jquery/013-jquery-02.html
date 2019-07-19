@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery引入容易出错</title>
+	<!--不能直接在jquery的引入标签里写js代码，需要新开一个script标签写js代码
+	-->
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			var $div = $('#div1');
+			$div.css({'color':'red'});
+			var $box = $('.box');
+			$box.css({'color':'green'});
+
+			var $li = $('.list li');
+			$li.css({'background-color':'pink','border':'1px solid #fff'});
+
+
+		});
+	</script>
+<!-- 	<style type="text/css">
+		#div{
+			color:red;
+
+		}
+		.box{
+			color:green;
+		}
+		.list li{
+			background-color:pink;
+		}
+	</style> -->
+
+</head>
+<body>
+	<div id="div1">div元素</div>
+	<div class="box">这是第一个div元素</div>
+	<div class="box">这是第二个div元素</div>
+	<ul class="list">
+		<li>
+			1
+		</li>
+		<li>
+			<2></2>
+		</li>
+		<li>
+			<3></3>
+		</li>
+		<li>
+			<4></4>
+		</li>
+		<li>
+			<5></5>
+		</li>
+		<li>
+			<6></6>
+		</li>
+		<li>
+			<7></7>
+		</li>
+		<li>
+			<8></8>
+		</li>
+	</ul>
+	
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获取元素索引值</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js">		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			// var $li = $('.list li');
+			// alert($li.length);
+			// alert($li.eq(3).index());
+			var $btns = $('.btns input');
+			var $div = $('.cons div');
+			$btns.click(function(){
+				//this 指的是原生的this,表示当前点击对象；
+				//当前点击的按钮加上样式后，其他按钮去掉样式
+				$(this).addClass('current').siblings().removeClass('current');
+				//alert($(this).index());
+				//当前点击按钮对应的索引值的div加上样式，其它的去掉样式；
+				$div.eq($(this).index()).addClass('text1').siblings().removeClass('text1');
+			});
+
+		})
+	</script>
+	<style type="text/css">
+		.btns input{
+			width:100px;
+			height:40px;
+			background-color:#ddd;
+			border:0px;
+		}
+		.btns .current{
+			background-color:gold;
+
+		}
+		.cons div{
+			width:500px;
+			height:300px;
+			background-color:gold;
+			display:none;
+		}
+		.cons .text1{
+			display:block;
+		}
+	</style>
+</head>
+<body>
+	<!-- <ul class="list">
+		<li>
+			<1></1>
+		</li>
+		<li>
+			<2></2>
+		</li>
+		<li>
+			<3></3>
+		</li>
+		<li>
+			<4></4>
+		</li>
+		<li class="mylist">
+			<5></5>
+		</li>
+		<li>
+			<6></6>
+		</li>
+		<li>
+			<7></7>
+		</li>
+		<li>
+			<8></8>
+		</li>
+	</ul> -->
+	<div class="btns">
+		<input type="button" name="" value="01" class='current'>
+		<input type="button" name="" value="02">
+		<input type="button" name="" value='03'>
+	</div>
+	<div class="cons">
+		<div class="text1">1</div>
+	    <div class="text2">2</div>
+	    <div class="text3">3</div>
+	</div>
+	
+</body>
+</html>

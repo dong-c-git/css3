@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery-绑定click事件</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			// var $div = $('.box');
+			// $div.class('width','50px');
+			// $div.class('height','60px');
+			// $div.class({'background-color':'gold'});
+			$('#btn').click(function(){
+				// if($('.box').hasClass('col01'))
+				// {
+				// 	$('.box').removeClass('col01');
+
+				// }
+				// else{
+				// 	$('.box').addClass('col01');
+				// }
+				//简化版本
+				$('.box').toggleClass('col01');
+
+			})
+		})
+	</script>
+	<style type="text/css">
+		
+		.box{
+			width:200px;
+			height:200px;
+			background-color:gold;
+		}
+		.col01{
+			width:300px;
+			height:300px;
+			background-color:pink;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">这是一个div标签</div>
+	<input type="button" name="" value="切换样式" id="btn">
+</body>
+</html>

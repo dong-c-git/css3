@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选择器过滤</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var $div = $('div');
+			$div.css({'background-color':'pink'});
+			$('div').css({'background-color':'gold'});
+			$('div').has('p').css({'fontSize':'30px','background-color':'green'});
+			$('div').eq(4).css({'textIndent':'20px'});
+			$('div').eq(4).prev().css({'background-color':'red'});
+			$div = $("#div1");
+			alert($div.length);
+			$div2 = $("#div2");
+			alert($div2.length);
+		})
+
+	</script>
+</head>
+<body>
+	<div id="div1">
+		div1第一个元素
+	</div>
+	<div class="div">
+		<1></1>
+	</div>
+	<div class="div">
+		<2></2>
+		<p>这是一个p标签</p>
+	</div>
+	
+	<div class="div">
+		<3></3>
+	</div>
+	<div class="div">
+		<4></4>
+	</div>
+	<div class="div">
+		<5></5>
+	</div>
+	<div class="div">
+		<6></6>
+	</div>
+	<div class="div">
+		<7></7>
+	</div>
+	<div class="div">
+		<8></8>
+	</div>
+</body>
+</html>

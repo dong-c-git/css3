@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jqury-test-01</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+			var oDiv = document.getElementById('div1');
+			alert('原生弹出的div标签');
+		}
+		$(document).ready(function() {
+			var $div = $("#div1");
+			alert('jquery弹出的弹窗'+$div);
+			
+		});
+		$(function(){
+			var $div = $('#div1');
+			alert('jquery弹出的弹窗2'+$div);
+		})
+	</script>
+
+</head>
+<body>
+	<div class="div">这是一个div元素</div>
+</body>
+</html>
